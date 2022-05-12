@@ -1,4 +1,4 @@
-# Kucoin Trade Aggregator 
+# Crypto Trade Aggregator 
 
 pulls in CSV dumps of your trades and aggregates them into PostgreSQL
 
