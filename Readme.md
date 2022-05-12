@@ -1,4 +1,4 @@
-#Kucoin Trade Aggregator 
+# Crypto Trade Aggregator
 
 pulls in CSV dumps of your trades and aggregates them into PostgreSQL
 
@@ -14,16 +14,23 @@ pulls in CSV dumps of your trades and aggregates them into PostgreSQL
 ### Exchange format Supported
 - KuCoin
 
+### To Configure
+- Go to: [configuration file here](src/main/resources/application-dev.yml.example)
+- copy to 'application-dev.yml'
+- change necessary information (Port, DB Name, and credentials)
+
 #### To Upload
 
-Make a POST request with a multipart-form with name 'file': 
+Make a POST request with a multipart-form with name 'file':
 ```
 POST: localhost:3030/api/v1/uploadKucoin
 ```
 
 ### Note this is a WIP
 
+### Contributing
+- See: [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### TODO's
- - add aggregation SQL to TradesRepository
- - print aggregated report to CSV
+- add aggregation SQL to TradesRepository
+- print aggregated report to CSV
