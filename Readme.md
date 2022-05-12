@@ -15,7 +15,7 @@ pulls in CSV dumps of your trades and aggregates them into PostgreSQL
 - KuCoin
 
 ### To Configure
-- Go to: src/main/resources/application-dev.yml.example
+- Go to: https://github.com/bnorthern42/Crypto-Trade-Aggregator/blob/58011af87caadd4899934c2b16d783842ac66f85/src/main/resources/application-dev.yml.example
 - copy to 'application-dev.yml'
 - change necessary information (Port, DB Name, and credentials)
 
