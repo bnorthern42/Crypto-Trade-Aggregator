@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.northern</groupId>
 	<artifactId>tradeagg</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>tradeagg</name>
 	<description>trade agg for crypto</description>
 	<properties>
@@ -69,6 +69,10 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.2</version>
+			</plugin>
 		</plugins>
 	</build>
 	<profiles>
@@ -88,5 +92,4 @@
 			</properties>
 		</profile>
 	</profiles>
-
 </project>

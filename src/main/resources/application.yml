@@ -1,13 +1,11 @@
 server:
   port : 3030
 spring:
+  application:
+    name: Crypto-trade-aggregator
+  profiles:
+    active: dev
   servlet:
     multipart:
       max-file-size: 2MB
       max-request-size: 2MB
-  jpa:
-    show-sql: true
-    generate-ddl: true
-    hibernate:
-      ddl-auto: create-drop
-    database: postgresql
