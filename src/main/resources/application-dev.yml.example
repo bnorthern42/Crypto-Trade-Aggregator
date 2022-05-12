@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: <your-password>
+    url: jdbc:postgresql://localhost:<port>/<dbName>
+    platform: postgres
+    initialization-mode: always
+    continue-on-error: true
