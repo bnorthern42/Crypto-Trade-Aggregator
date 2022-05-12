@@ -14,6 +14,11 @@ pulls in CSV dumps of your trades and aggregates them into PostgreSQL
 ### Exchange format Supported
 - KuCoin
 
+### To Configure
+- Go to: src/main/resources/application-dev.yml.example
+- copy to 'application-dev.yml'
+- change necessary information (Port, DB Name, and credentials)
+
 #### To Upload
 
 Make a POST request with a multipart-form with name 'file': 
