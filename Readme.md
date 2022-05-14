@@ -25,6 +25,15 @@ Make a POST request with a multipart-form with name 'file':
 ```
 POST: localhost:3030/api/v1/uploadKucoin
 ```
+Returns status message
+
+### To Aggregate
+
+Make a GET request:
+```
+GET: localhost:3030/api/v1/aggKucoinSymbol
+```
+Returns JSON of aggregated trades
 
 ### Note this is a WIP
 
