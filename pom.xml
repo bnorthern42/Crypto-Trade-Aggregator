@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.northern</groupId>
 	<artifactId>tradeagg</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>tradeagg</name>
 	<description>trade agg for crypto</description>
 	<properties>
