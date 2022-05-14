@@ -8,6 +8,9 @@ import org.apache.commons.csv.CSVRecord;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -40,17 +43,21 @@ public class CSVHelper {
              ) {
 
             List<Trades> mytrades = new ArrayList<>();
-            Iterable<CSVRecord> csvRecords = csvParser.getRecords();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
+            Iterable<CSVRecord> csvRecords = csvParser.getRecords();
 
             //Iterables.skip(csvRecords,1)
             for (CSVRecord csvRecord : csvRecords) {
 
 
               //  System.out.println(ZonedDateTime.parse(csvRecord.get("tradeCreatedAt")).toString());
+                String tradeCreatedAt = csvRecord.get(0);
+                Timestamp tradeCreatedAtTs = new Timestamp((dateFormat.parse(tradeCreatedAt)).getTime());
+
                 Trades trades = new Trades(
 
-                        csvRecord.get(0),
+                        tradeCreatedAtTs,
                         csvRecord.get(1),
                         csvRecord.get(2),
                         csvRecord.get(3),
@@ -73,7 +80,7 @@ public class CSVHelper {
 
             }
             return mytrades;
-        } catch (IOException e) {
+        } catch (IOException | ParseException e) {
             throw new RuntimeException("fail to parse CSV file: " + e.getMessage());
 
         }
