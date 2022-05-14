@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.data.jpa.repository.EntityGraph;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 
@@ -20,7 +21,7 @@ public class Trades {
 
 
     @Column(name ="tradeCreatedAt")
-    private String localDateTime;
+    private Timestamp localDateTime;
 
     @Id
     @Column(name = "orderId")
