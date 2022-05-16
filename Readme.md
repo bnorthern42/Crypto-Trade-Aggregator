@@ -41,5 +41,4 @@ Returns JSON of aggregated trades
 - See: [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### TODO's
-- add aggregation SQL to TradesRepository
 - print aggregated report to CSV
